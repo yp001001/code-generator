@@ -7,7 +7,6 @@
         <groupId>org.codegen.apt</groupId>
         <artifactId>code-generator</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../../code-generator/pom.xml</relativePath>
     </parent>
 
     <artifactId>code-gen-apt</artifactId>
