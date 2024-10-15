@@ -1,16 +1,16 @@
-package com.codegen.controller;
+package com.codegen.processor.api;
 
 import java.lang.annotation.*;
 
 /**
  * @author: yp
- * @date: 2024/10/12 15:24
+ * @date: 2024/10/15 9:42
  * @description:
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-public @interface GenController {
+public @interface GenCreatorRequest {
 
     String pkgName();
 

@@ -1,4 +1,4 @@
-package com.codegen.api;
+package com.codegen.processor.api;
 
 import com.codegen.BaseCodeGenProcessor;
 import com.codegen.common.model.Request;

@@ -1,4 +1,4 @@
-package com.codegen.update;
+package com.codegen.processor.update;
 
 import com.codegen.BaseCodeGenProcessor;
 import com.codegen.spi.CodeGenProcessor;

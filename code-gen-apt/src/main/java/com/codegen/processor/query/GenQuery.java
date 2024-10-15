@@ -1,14 +1,16 @@
-package com.codegen.api;
+package com.codegen.processor.query;
 
 import java.lang.annotation.*;
 
 /**
- * @author gim
+ * @Author: Gim
+ * @Date: 2019-10-08 17:13
+ * @Description:
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-public @interface GenQueryRequest {
+public @interface GenQuery {
 
   String pkgName();
 

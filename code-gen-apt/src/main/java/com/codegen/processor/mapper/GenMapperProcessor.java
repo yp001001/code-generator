@@ -5,6 +5,7 @@ import com.codegen.common.DateMapper;
 import com.codegen.common.GenericEnumMapper;
 import com.codegen.processor.DefaultNameContext;
 import com.codegen.spi.CodeGenProcessor;
+import com.codegen.utils.StringUtils;
 import com.google.auto.service.AutoService;
 import com.squareup.javapoet.*;
 import org.mapstruct.Mapper;
@@ -14,6 +15,7 @@ import javax.annotation.processing.RoundEnvironment;
 import javax.lang.model.element.Modifier;
 import javax.lang.model.element.TypeElement;
 import java.lang.annotation.Annotation;
+import java.util.Optional;
 
 /**
  * @author: yp
@@ -41,7 +43,11 @@ public class GenMapperProcessor extends BaseCodeGenProcessor {
                 .initializer("$T.getMapper($T.class)", Mappers.class, ClassName.get(packageName, className))
                 .build();
         typeSpecBuilder.addField(fieldSpec);
-        // DefaultNameContext nameContext = getNameContext(typeElement);
+
+        DefaultNameContext nameContext = getNameContext(typeElement);
+        Optional<MethodSpec> request2Dto = request2Query(nameContext);
+        request2Dto.ifPresent(m -> typeSpecBuilder.addMethod(m));
+
         genJavaSourceFile(generatePackage(typeElement),
                 typeElement.getAnnotation(GenMapper.class).sourcePath(), typeSpecBuilder);
     }
@@ -55,6 +61,19 @@ public class GenMapperProcessor extends BaseCodeGenProcessor {
     @Override
     public String generatePackage(TypeElement typeElement) {
         return typeElement.getAnnotation(GenMapper.class).pkgName();
+    }
+
+    private Optional<MethodSpec> request2Query(DefaultNameContext nameContext) {
+        String queryRequestClassName = nameContext.getQueryRequestClassName();
+        String creatorClassName = nameContext.getCreatorClassName();
+        if (!StringUtils.containsNull(queryRequestClassName, creatorClassName)) {
+            return Optional.of(MethodSpec.methodBuilder("request2Dto")
+                    .addModifiers(Modifier.PUBLIC, Modifier.ABSTRACT)
+                    .returns(ClassName.get(nameContext.getCreatorPackageName(), creatorClassName))
+                    .addParameter(ClassName.get(nameContext.getQueryRequestPackageName(), queryRequestClassName), "request")
+                    .build());
+        }
+        return Optional.empty();
     }
 
 }

@@ -1,4 +1,4 @@
-package com.codegen.api;
+package com.codegen.processor.api;
 
 import com.codegen.BaseCodeGenProcessor;
 import com.codegen.common.model.Request;
@@ -12,7 +12,6 @@ import javax.lang.model.element.TypeElement;
 import javax.lang.model.element.VariableElement;
 import javax.xml.validation.Schema;
 import java.lang.annotation.Annotation;
-import java.util.Objects;
 import java.util.Set;
 
 /**

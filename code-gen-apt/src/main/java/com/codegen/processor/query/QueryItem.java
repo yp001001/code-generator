@@ -1,4 +1,4 @@
-package com.codegen.query;
+package com.codegen.processor.query;
 
 import java.lang.annotation.*;
 

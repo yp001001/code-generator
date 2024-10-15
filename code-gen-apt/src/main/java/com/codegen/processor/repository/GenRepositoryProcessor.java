@@ -1,4 +1,4 @@
-package com.codegen.repository;
+package com.codegen.processor.repository;
 
 import com.codegen.BaseCodeGenProcessor;
 import com.codegen.spi.CodeGenProcessor;
@@ -6,7 +6,6 @@ import com.google.auto.service.AutoService;
 import com.jpa.support.BaseRepository;
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.ParameterizedTypeName;
-import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
 
 import javax.annotation.processing.RoundEnvironment;

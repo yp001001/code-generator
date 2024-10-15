@@ -1,7 +1,6 @@
 package com.codegen.processor.vo;
 
 import com.codegen.BaseCodeGenProcessor;
-import com.codegen.processor.service.GenService;
 import com.codegen.sort.Order;
 import com.codegen.spi.CodeGenProcessor;
 import com.google.auto.service.AutoService;

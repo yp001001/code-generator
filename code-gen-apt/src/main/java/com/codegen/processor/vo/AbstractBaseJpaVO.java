@@ -2,7 +2,6 @@ package com.codegen.processor.vo;
 
 import com.jpa.support.BaseJpaAggregate;
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.Data;
 
 /**
  * @author: yp

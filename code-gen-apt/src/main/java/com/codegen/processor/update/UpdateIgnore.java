@@ -1,4 +1,4 @@
-package com.codegen.update;
+package com.codegen.processor.update;
 
 /**
  * @author: yp

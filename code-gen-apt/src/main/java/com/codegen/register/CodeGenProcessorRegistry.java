@@ -1,8 +1,6 @@
 package com.codegen.register;
 
-import com.codegen.sort.Order;
 import com.codegen.spi.CodeGenProcessor;
-import org.aspectj.weaver.ast.Or;
 
 import java.util.*;
 

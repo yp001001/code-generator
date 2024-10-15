@@ -4,8 +4,6 @@ import com.codegen.common.annotation.FieldDesc;
 import com.codegen.common.annotation.TypeConverter;
 import com.codegen.context.ProcessingEnvironmentHolder;
 import com.codegen.processor.DefaultNameContext;
-import com.codegen.processor.api.GenCreateRequestProcessor;
-import com.codegen.processor.api.GenCreatorRequest;
 import com.codegen.processor.api.GenQueryRequest;
 import com.codegen.processor.api.GenQueryRequestProcessor;
 import com.codegen.processor.controller.GenController;

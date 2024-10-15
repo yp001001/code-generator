@@ -1,16 +1,16 @@
-package com.codegen.vo;
+package com.codegen.processor.repository;
 
 import java.lang.annotation.*;
 
 /**
  * @author: yp
- * @date: 2024/10/12 15:35
+ * @date: 2024/10/15 16:26
  * @description:
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-public @interface GenVo {
+public @interface GenRepository {
 
     String pkgName();
 
@@ -18,5 +18,4 @@ public @interface GenVo {
 
     boolean overrideSource() default false;
 
-    boolean jpa() default true;
 }

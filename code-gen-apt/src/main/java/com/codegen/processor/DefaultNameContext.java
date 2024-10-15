@@ -1,7 +1,5 @@
 package com.codegen.processor;
 
-import lombok.Data;
-
 /**
  * @author: yp
  * @date: 2024/10/12 13:47

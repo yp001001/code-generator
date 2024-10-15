@@ -1,8 +1,6 @@
-package com.codegen.query;
+package com.codegen.processor.query;
 
 import com.codegen.BaseCodeGenProcessor;
-import com.codegen.processor.creator.GenCreator;
-import com.codegen.processor.creator.IgnoreCreator;
 import com.codegen.spi.CodeGenProcessor;
 import com.google.auto.service.AutoService;
 import com.squareup.javapoet.TypeSpec;
